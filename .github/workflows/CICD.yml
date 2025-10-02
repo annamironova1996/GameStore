@@ -54,7 +54,7 @@ jobs:
           find "${{ github.event_name == 'push' && 'public_html/dev.development-vse-avto.ru' || 'public_html/live.development-vse-avto.ru' }}" -type f -name "*.php" ! -name "wp-config.php" -delete
           rm -r "${{ github.event_name == 'push' && 'public_html/dev.development-vse-avto.ru' || 'public_html/live.development-vse-avto.ru' }}/wp-admin/" "${{ github.event_name == 'push' && 'public_html/dev.development-vse-avto.ru' || 'public_html/live.development-vse-avto.ru' }}/wp-includes/"
           unzip -o "${{ github.event_name == 'push' && 'public_html/dev.development-vse-avto.ru' || 'public_html/live.development-vse-avto.ru' }}/wordpress.zip" -d "${{ github.event_name == 'push' && 'public_html/dev.development-vse-avto.ru' || 'public_html/live.development-vse-avto.ru' }}/"
-          mv "${{ github.event_name == 'push' && 'public_html/dev.development-vse-avto.ru' || 'public_html/live.development-vse-avto.ru' }}/wordpress"/* "${{ github.event_name == 'push' && 'public_html/dev.development-vse-avto.ru' || 'public_html/live.development-vse-avto.ru' }}/
+          mv "${{ github.event_name == 'push' && 'public_html/dev.development-vse-avto.ru' || 'public_html/live.development-vse-avto.ru' }}/wordpress/"* "${{ github.event_name == 'push' && 'public_html/dev.development-vse-avto.ru' || 'public_html/live.development-vse-avto.ru' }}/
           rm -r "${{ github.event_name == 'push' && 'public_html/dev.development-vse-avto.ru' || 'public_html/live.development-vse-avto.ru' }}/wordpress"
 
     - name: Update Plugins and Theme
