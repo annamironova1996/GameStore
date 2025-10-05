@@ -90,3 +90,17 @@
 .hero-content:hover, .hero-content:active {
   box-shadow: 0 8px 18px 0 var(--blue-48);
 }
+
+.slider-container {
+  display: flex;
+  width: 100%;
+}
+.slider-container .swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hero-slider {
+  z-index: 1;
+}

@@ -57,6 +57,8 @@ body .is-layout-constrained .wp-block-blocks-gamestore-block-hero {
 
 		.hero-title {
 			color: var(--white-contrast);
+			font-size: 64px;
+			line-height: 120%;
 
 			strong {
 				background: var(
@@ -67,6 +69,10 @@ body .is-layout-constrained .wp-block-blocks-gamestore-block-hero {
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 			}
+		}
+		.hero-description {
+			font-size: 20px;
+			line-height: 160%;
 		}
 	}
 
@@ -85,22 +91,9 @@ body .is-layout-constrained .wp-block-blocks-gamestore-block-hero {
 		);
 
 		.slider-container {
-			position: relative;
-			width: 100%;
-			max-width: 1540px;
-			margin: 0 auto;
-			z-index: 3;
-			overflow: hidden;
-			box-sizing: border-box;
-
 			.swiper-wrapper {
-				display: flex;
-				justify-content: center;
-
 				.slide-item {
-					margin-right: 100px;
 					max-width: fit-content;
-					margin-left: 0;
 
 					img.dark-logo {
 						display: none;
@@ -122,6 +115,94 @@ body .is-layout-constrained .wp-block-blocks-gamestore-block-hero {
 		}
 		img.light-logo {
 			display: none;
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+	body .is-layout-constrained .wp-block-blocks-gamestore-block-hero {
+		height: 810px;
+	}
+	.wp-block-blocks-gamestore-block-hero {
+		.hero-content {
+			.hero-title {
+				font-size: 54px;
+			}
+			.hero-description {
+				font-size: 18px;
+			}
+		}
+		.hero-slider {
+			height: 120px;
+		}
+	}
+}
+@media (max-width: 1199px) {
+	.wp-block-blocks-gamestore-block-hero {
+		.hero-slider {
+			.slider-container {
+				.swiper-wrapper {
+					.slide-item img {
+						max-height: 40px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.wp-block-blocks-gamestore-block-hero {
+		.hero-content {
+			.hero-title {
+				font-size: 44px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.wp-block-blocks-gamestore-block-hero {
+		.hero-content {
+			gap: 18px;
+
+			.hero-description {
+				font-size: 16px;
+			}
+			.hero-title {
+				font-size: 38px;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	body .is-layout-constrained .wp-block-blocks-gamestore-block-hero {
+		min-height: 100svh;
+		height: auto;
+	}
+	.wp-block-blocks-gamestore-block-hero {
+		.hero-content {
+			padding: 80px 16px 200px;
+			.hero-title {
+				font-size: 38px;
+				max-width: 300px;
+			}
+			.hero-description {
+				font-size: 14px;
+				max-width: 256px;
+			}
+		}
+		.hero-slider {
+			height: 62px;
+		}
+	}
+}
+@media (max-width: 340px) {
+	.wp-block-blocks-gamestore-block-header {
+		.custom-logo-link {
+			width: 120px;
+			height: 18px;
 		}
 	}
 }
